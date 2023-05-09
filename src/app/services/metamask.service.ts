@@ -9,6 +9,8 @@ export class MetamaskService {
   currentChainId$: BehaviorSubject<string> = new BehaviorSubject<string>('');
   currentAccount$: BehaviorSubject<string> = new BehaviorSubject<string>('');
   balance$: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  provider: ethers.providers.Web3Provider | undefined;
+  signer: ethers.Signer | undefined;
 
   checkMetamaskAvailability() {
     try {
@@ -40,6 +42,7 @@ export class MetamaskService {
   }
 
   handleChainChanged(): void {
+    console.log({log: window.ethereum})
     this.currentChainId$.next(window.ethereum.chainId);
     window.ethereum.on('chainChanged', () => {
       window.location.reload();
@@ -48,15 +51,16 @@ export class MetamaskService {
 
   handleAccountsChanged() {
     this.currentAccount$.next(window.ethereum.selectedAddress);
+    this.provider = this.getProvider();
+    this.signer = this.provider.getSigner();
     window.ethereum.on('accountsChanged', () => {
       window.location.reload();
     });
   }
 
   async getBalance() {
-    const balance = await new ethers.providers.Web3Provider(
-      window.ethereum
-    ).getBalance(this.currentAccount$.value);
+    if (!this.provider) throw new Error("Provider not configured!");
+    const balance = await this.provider.getBalance(this.currentAccount$.value);
     this.balance$.next(ethers.utils.formatEther(balance));
   }
 
