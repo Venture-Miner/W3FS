@@ -5,22 +5,22 @@
       <div class="flex flex-row items-center gap-4 text-sm">
         <span
           class="p-4 font-bold text-white rounded bg-brand-turquoise"
-          *ngIf="currentChainId$ | async"
-          >Network ID {{ currentChainId$ | async }}</span
+          *ngIf="currentChainId()"
+          >Network ID {{ currentChainId() }}</span
         >
         <span
           class="p-4 font-bold text-white break-all rounded bg-brand-turquoise"
-          *ngIf="currentAccount$ | async"
-          >{{ currentAccount$ | async }}</span
+          *ngIf="currentAccount()"
+          >{{ currentAccount() }}</span
         >
         <span
           class="p-4 font-bold text-white break-all rounded bg-brand-turquoise"
-          *ngIf="balance$ | async"
-          >{{ balance$ | async }}</span
+          *ngIf="balance()"
+          >{{ balance() }}</span
         >
         <span
           class="p-4 font-bold text-white break-all rounded cursor-pointer bg-brand-turquoise"
-          *ngIf="hasMetamask && !(currentAccount$ | async)"
+          *ngIf="hasMetamask && !currentAccount()"
           (click)="connectWallet()"
           >CONNECT WALLET</span
         >
@@ -56,7 +56,7 @@
     </table>
     <div
       class="rounded bg-white mt-10 p-4 flex flex-col gap-4"
-      *ngIf="currentAccount$ | async"
+      *ngIf="currentAccount()"
     >
       <span class="font-bold text-brand-turquoise text-lg">Sign Message</span>
       <input

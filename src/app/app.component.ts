@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, effect } from '@angular/core';
 import { MetamaskService } from './services/metamask.service';
 import { AlchemyService } from './services/alchemy.service';
 import { TokenBalance } from 'alchemy-sdk';
@@ -17,9 +17,9 @@ declare global {
 })
 export class AppComponent {
   title = 'w3fs-frontend';
-  currentChainId$ = this.metamaskService.currentChainId$;
-  currentAccount$ = this.metamaskService.currentAccount$;
-  balance$ = this.metamaskService.balance$;
+  currentChainId = this.metamaskService.currentChainId;
+  currentAccount = this.metamaskService.currentAccount;
+  balance = this.metamaskService.balance;
   hasMetamask;
   tokenBalances: TokenBalance[] = [];
   message = new FormControl('', Validators.required);
@@ -33,10 +33,10 @@ export class AppComponent {
     if (this.hasMetamask) {
       metamaskService.retrieveConnection();
     }
-    this.currentAccount$.subscribe(async (account) => {
-      if (account) {
+    effect(async () => {
+      if (this.currentAccount()) {
         this.tokenBalances = await this.alchemyService.getTokenBalances(
-          account
+          this.currentAccount()
         );
       }
     });
