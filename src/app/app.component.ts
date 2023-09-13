@@ -1,14 +1,9 @@
-import { Component, effect } from '@angular/core';
-import { MetamaskService } from './services/metamask.service';
-import { AlchemyService } from './services/alchemy.service';
-import { TokenBalance } from 'alchemy-sdk';
-import { FormControl, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { WalletService } from './services/wallet.service';
+import { getAccount } from '@wagmi/core';
 
-declare global {
-  interface Window {
-    ethereum: any;
-  }
-}
+type HexString = `0x${string}` | undefined;
 
 @Component({
   selector: 'app-root',
@@ -16,40 +11,67 @@ declare global {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'w3fs-frontend';
-  currentChainId = this.metamaskService.currentChainId;
-  currentAccount = this.metamaskService.currentAccount;
-  balance = this.metamaskService.balance;
-  hasMetamask;
-  tokenBalances: TokenBalance[] = [];
-  message = new FormControl('', Validators.required);
-  signatures: string[] = [];
+  accountSubscription: Subscription = new Subscription();
+  walletAddress: HexString;
 
-  constructor(
-    private metamaskService: MetamaskService,
-    private alchemyService: AlchemyService
-  ) {
-    this.hasMetamask = metamaskService.checkMetamaskAvailability();
-    if (this.hasMetamask) {
-      metamaskService.retrieveConnection();
-    }
-    effect(async () => {
-      if (this.currentAccount()) {
-        this.tokenBalances = await this.alchemyService.getTokenBalances(
-          this.currentAccount()
-        );
+  constructor(private walletService: WalletService) {}
+
+  ngOnInit() {
+    const currentAccount = getAccount();
+    if (currentAccount && currentAccount.isConnected)
+      this.walletAddress = currentAccount.address;
+    this.accountSubscription = this.walletService.accountChanged$.subscribe(
+      (account) => {
+        if (account.isConnected) {
+          this.walletAddress = account.address;
+        }
       }
-    });
+    );
   }
 
   connectWallet() {
-    this.metamaskService.connectWallet();
+    this.walletService.web3Modal.openModal();
   }
 
-  signMessage() {
-    const message = this.message.value!;
-    this.metamaskService.signer?.signMessage(message).then((signature) => {
-      this.signatures.push(signature);
-    });
+  ngOnDestroy() {
+    this.accountSubscription.unsubscribe();
   }
+  //TODO: Check the information that will be needed in the new version before deleting the comments
+
+  // title = 'w3fs-frontend';
+  // currentChainId = this.metamaskService.currentChainId;
+  // currentAccount = this.metamaskService.currentAccount;
+  // balance = this.metamaskService.balance;
+  // hasMetamask;
+  // tokenBalances: TokenBalance[] = [];
+  // message = new FormControl('', Validators.required);
+  // signatures: string[] = [];
+
+  // constructor(
+  //   private metamaskService: MetamaskService,
+  //   private alchemyService: AlchemyService
+  // ) {
+  //   this.hasMetamask = metamaskService.checkMetamaskAvailability();
+  //   if (this.hasMetamask) {
+  //     metamaskService.retrieveConnection();
+  //   }
+  //   effect(async () => {
+  //     if (this.currentAccount()) {
+  //       this.tokenBalances = await this.alchemyService.getTokenBalances(
+  //         this.currentAccount()
+  //       );
+  //     }
+  //   });
+  // }
+
+  // connectWallet() {
+  //   this.metamaskService.connectWallet();
+  // }
+
+  // signMessage() {
+  //   const message = this.message.value!;
+  //   this.metamaskService.signer?.signMessage(message).then((signature) => {
+  //     this.signatures.push(signature);
+  //   });
+  // }
 }
