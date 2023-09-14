@@ -7,7 +7,7 @@ import {
   w3mProvider,
 } from '@web3modal/ethereum';
 import { Web3Modal } from '@web3modal/html';
-import { arbitrum, mainnet, polygon } from 'viem/dist/types/chains';
+import { arbitrum, mainnet, polygon } from '@wagmi/core/chains';
 import {
   configureChains,
   createConfig,
