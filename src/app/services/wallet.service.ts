@@ -7,12 +7,15 @@ import {
   w3mProvider,
 } from '@web3modal/ethereum';
 import { Web3Modal } from '@web3modal/html';
-import { arbitrum, mainnet, polygon } from '@wagmi/core/chains';
+import { arbitrum, mainnet, polygon, polygonMumbai } from '@wagmi/core/chains';
 import {
   configureChains,
   createConfig,
   disconnect,
+  fetchBalance,
+  fetchToken,
   getAccount,
+  signMessage,
   watchAccount,
 } from '@wagmi/core';
 
@@ -32,7 +35,7 @@ export class WalletService {
 
   initializeWallet() {
     try {
-      const chains = [arbitrum, mainnet, polygon];
+      const chains = [arbitrum, mainnet, polygon, polygonMumbai];
       const projectId = environment.projectId;
       const { publicClient } = configureChains(chains, [
         w3mProvider({ projectId }),
@@ -43,10 +46,26 @@ export class WalletService {
         publicClient,
       });
       this.ethereumClient = new EthereumClient(wagmiConfig, chains);
+      this.web3Modal = this.configureWeb3Modal(projectId);
       this.initializeAccountWatch();
     } catch (error) {
       console.error('Failed to initialize wallet:', error);
     }
+  }
+
+  configureWeb3Modal(projectId: string): Web3Modal {
+    return new Web3Modal(
+      {
+        projectId,
+        themeMode: 'light',
+        themeVariables: {
+          '--w3m-background-color': '#51B7AF',
+          '--w3m-accent-color': '#51B7AF',
+          '--w3m-logo-image-url': './assets/venture-miner-logo.png',
+        },
+      },
+      this.ethereumClient
+    );
   }
 
   initializeAccountWatch(): void {
@@ -63,7 +82,46 @@ export class WalletService {
     }
   }
 
-  getAccountStatus() {
-    return getAccount();
+  async getWalletBalance() {
+    try {
+      const currentAccount = getAccount();
+      if (currentAccount.isConnected && currentAccount.address) {
+        const balance = await fetchBalance({
+          address: `0x${currentAccount.address.slice(2)}`,
+        });
+        return balance.formatted;
+      } else {
+        return '0';
+      }
+    } catch (error) {
+      console.error('Error getting wallet balance:', error);
+      return '0';
+    }
+  }
+
+  async getTokenBalances() {
+    try {
+      const currentAccount = getAccount();
+      if (currentAccount.isConnected && currentAccount.address) {
+        const balance = await fetchToken({
+          address: `0x${currentAccount.address.slice(2)}`,
+        });
+        return balance.name;
+      } else {
+        return '0';
+      }
+    } catch (error) {
+      console.error('Error getting token balance:', error);
+      return '0';
+    }
+  }
+
+  async signMessage(message: string) {
+    try {
+      await signMessage({ message: message });
+    } catch (error) {
+      console.error('Error signing message:', error);
+    }
+    return message;
   }
 }
