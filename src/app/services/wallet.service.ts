@@ -13,8 +13,8 @@ import {
   createConfig,
   disconnect,
   fetchBalance,
-  fetchToken,
   getAccount,
+  getNetwork,
   signMessage,
   watchAccount,
 } from '@wagmi/core';
@@ -99,29 +99,34 @@ export class WalletService {
     }
   }
 
-  async getTokenBalances() {
+  async signMessage(message: string) {
     try {
-      const currentAccount = getAccount();
-      if (currentAccount.isConnected && currentAccount.address) {
-        const balance = await fetchToken({
-          address: `0x${currentAccount.address.slice(2)}`,
-        });
-        return balance.name;
+      const signatureNumber = await signMessage({ message: message });
+      if (signatureNumber) {
+        return signatureNumber;
       } else {
-        return '0';
+        console.error('Error sending message: signature not found');
+        return '';
       }
     } catch (error) {
-      console.error('Error getting token balance:', error);
-      return '0';
+      console.error('Error signing message:', error);
+      return '';
     }
   }
 
-  async signMessage(message: string) {
+  async getWalletNetwork() {
     try {
-      await signMessage({ message: message });
+      const currentAccount = getAccount();
+      if (currentAccount.isConnected) {
+        const chain = await getNetwork();
+        if (chain && chain.chain) {
+          return chain.chain.id;
+        }
+      }
+      return -1;
     } catch (error) {
-      console.error('Error signing message:', error);
+      console.error('Error getting wallet network ID:', error);
+      return -1;
     }
-    return message;
   }
 }
