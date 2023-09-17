@@ -4,6 +4,12 @@ import { TokenBalance } from 'alchemy-sdk';
 import { AlchemyService } from '../services/alchemy.service';
 import { MetamaskService } from '../services/metamask.service';
 
+declare global {
+  interface Window {
+    ethereum: any;
+  }
+}
+
 @Component({
   selector: 'app-connect-wallet-alchemy',
   templateUrl: './connect-wallet-alchemy.component.html',
@@ -40,7 +46,7 @@ export class ConnectWalletAlchemyComponent {
     this.metamaskService.connectWallet();
   }
 
-  async signMessage() {
+  signMessage() {
     const message = this.message.value!;
     this.metamaskService.signer?.signMessage(message).then((signature) => {
       this.signatures.push(signature);
