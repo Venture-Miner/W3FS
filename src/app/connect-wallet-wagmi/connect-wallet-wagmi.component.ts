@@ -4,6 +4,10 @@ import { Subscription } from 'rxjs';
 import { WalletService } from '../services/wallet.service';
 
 type HexString = `0x${string}` | undefined;
+type TokenBalance = {
+  contractAddress: string;
+  balance: string;
+};
 
 @Component({
   selector: 'app-connect-wallet-wagmi',
@@ -14,11 +18,11 @@ export class ConnectWalletWagmiComponent {
   accountSubscription: Subscription = new Subscription();
   walletAddress: HexString;
   walletBalance: string = '0';
-  walletTokens: string = '0';
   step = 1;
   message: string;
   signatures: string[] = [];
   walletNetwork: number = -1;
+  walletTokens: TokenBalance[] = [];
 
   constructor(private walletService: WalletService) {
     this.message = '';
@@ -40,6 +44,7 @@ export class ConnectWalletWagmiComponent {
             this.walletAddress = account.address;
             this.walletBalance = await this.walletService.getWalletBalance();
             this.walletNetwork = await this.walletService.getWalletNetwork();
+            this.walletTokens = await this.walletService.getFetchToken();
           } else {
             this.step = 1;
           }

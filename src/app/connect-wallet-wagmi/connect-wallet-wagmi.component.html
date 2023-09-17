@@ -22,32 +22,35 @@
         </div>
       </div>
     </div>
-    <!-- <table
-  class="text-brand-turquoise font-bold rounded bg-white break-all mt-10 w-full container mx-auto"
->
-  <thead class="bg-brand-turquoise bg-opacity-10">
-    <tr>
-      <th class="px-6 py-4">Contract Address</th>
-      <th class="px-6 py-4">Token Balance</th>
-    </tr>
-  </thead>
-  <tbody>
-    <ng-container *ngFor="let tokenBalance of walletTokens">
-      <tr class="border-b last:border-b-0">
-        <td class="px-6 py-4">
-          {{ tokenBalance.contractAddress }}
-        </td>
-        <td class="px-6 py-4" *ngIf="tokenBalance.balance !== '0'">
-          {{ tokenBalance.balance }}
-        </td>
-        <td class="px-6 py-4" *ngIf="tokenBalance.balance === '0'">
-          No balance
-        </td>
-      </tr>
-    </ng-container>
-  </tbody>
-</table> -->
+    <table
+      class="text-brand-turquoise font-bold rounded bg-white break-all mt-10 w-full container mx-auto"
+      *ngIf="walletTokens.length"
+    >
+      <thead class="bg-brand-turquoise bg-opacity-10">
+        <tr>
+          <th class="px-6 py-4">Contract Address</th>
+          <th class="px-6 py-4">Token Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let tokenBalance of walletTokens">
+          <tr class="border-b last:border-b-0">
+            <td class="px-6 py-4">
+              {{ tokenBalance.contractAddress }}
+            </td>
+            <td class="px-6 py-4">
+              {{
+                tokenBalance.balance !== "0"
+                  ? tokenBalance.balance
+                  : "No balance"
+              }}
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
     <div
+      *ngIf="step === 2"
       class="rounded bg-white mt-10 p-4 flex flex-col gap-4 container mx-auto"
     >
       <span class="font-bold text-brand-turquoise text-lg">Sign Message</span>
