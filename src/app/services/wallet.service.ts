@@ -13,6 +13,7 @@ import {
   createConfig,
   disconnect,
   fetchBalance,
+  fetchToken,
   getAccount,
   getNetwork,
   signMessage,
@@ -127,6 +128,29 @@ export class WalletService {
     } catch (error) {
       console.error('Error getting wallet network ID:', error);
       return -1;
+    }
+  }
+
+  async getFetchToken() {
+    try {
+      const currentAccount = getAccount();
+      if (currentAccount.isConnected && currentAccount.address) {
+        const tokens = await fetchToken({
+          address: `0x${currentAccount.address.slice(2)}`,
+          formatUnits: 'gwei',
+        });
+        const tokenArray = Array.isArray(tokens) ? tokens : [tokens];
+
+        return tokenArray.map((token) => ({
+          contractAddress: token.contractAddress,
+          balance: token.balance,
+        }));
+      } else {
+        return [];
+      }
+    } catch (error) {
+      console.error('Error getting wallet tokens:', error);
+      return [];
     }
   }
 }
