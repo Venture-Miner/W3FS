@@ -209,3 +209,59 @@
 [NX Daemon Server] - 2023-11-29T03:07:52.264Z - Time taken for 'hash changed files from watcher' 0.23560000211000443ms
 [NX Daemon Server] - 2023-11-29T03:08:50.465Z - [WATCHER]: Processing file changes in outputs
 [NX Daemon Server] - 2023-11-29T03:08:50.576Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-11-29T16:26:32.493Z - Started listening on: /tmp/f578884d592be05ad074/d.sock
+[NX Daemon Server] - 2023-11-29T16:26:32.494Z - [WATCHER]: Subscribed to changes within: /home/matheus/Projects/Venture Miner/w3fs (native)
+[NX Daemon Server] - 2023-11-29T16:26:32.503Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-29T16:26:32.504Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-11-29T16:26:32.506Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-11-29T16:26:32.530Z - [REQUEST]: Updated file-hasher based on watched changes, recomputing project graph...
+[NX Daemon Server] - 2023-11-29T16:26:32.530Z - [REQUEST]: 
+[NX Daemon Server] - 2023-11-29T16:26:32.530Z - [REQUEST]: 
+[NX Daemon Server] - 2023-11-29T16:26:32.566Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-11-29T16:26:32.568Z - Time taken for 'total for creating and serializing project graph' 60.46956199966371ms
+[NX Daemon Server] - 2023-11-29T16:26:32.568Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-29T16:26:32.569Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-11-29T16:26:32.569Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 60. Response time: 3.
+[NX Daemon Server] - 2023-11-29T16:26:32.573Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-11-29T16:26:32.574Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-29T16:26:32.575Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2023-11-29T16:26:32.575Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-29T16:26:32.576Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2023-11-29T16:26:32.576Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2023-11-29T16:26:32.576Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 0.
+[NX Daemon Server] - 2023-11-29T16:26:32.972Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-11-29T16:26:32.972Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-29T16:26:32.972Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-11-29T16:26:32.973Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-11-29T16:26:32.973Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-11-29T16:26:32.974Z - Time taken for 'total for creating and serializing project graph' 0.07779299980029464ms
+[NX Daemon Server] - 2023-11-29T16:26:32.975Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-11-29T16:26:32.975Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2023-11-29T16:26:32.987Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-11-29T16:26:32.987Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-11-29T16:26:32.988Z - Time taken for 'total for creating and serializing project graph' 0.10654699988663197ms
+[NX Daemon Server] - 2023-11-29T16:26:32.988Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-11-29T16:26:32.988Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-11-29T16:26:32.995Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-11-29T16:26:32.995Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-11-29T16:26:32.996Z - Time taken for 'total for creating and serializing project graph' 0.17320299986749887ms
+[NX Daemon Server] - 2023-11-29T16:26:32.997Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-11-29T16:26:32.997Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2023-11-29T16:26:33.031Z - [REQUEST]: Responding to the client. handleRequestFileData
+[NX Daemon Server] - 2023-11-29T16:26:33.031Z - Done responding to the client handleRequestFileData
+[NX Daemon Server] - 2023-11-29T16:26:33.031Z - Handled REQUEST_FILE_DATA. Handling time: 0. Response time: 1.
+[NX Daemon Server] - 2023-11-29T16:26:33.054Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-29T16:28:27.232Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-11-29T16:28:27.233Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-29T16:28:27.233Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2023-11-29T16:28:27.234Z - [REQUEST]: Client Request for Project Graph Received
+[NX Daemon Server] - 2023-11-29T16:28:27.234Z - [REQUEST]: Responding to the client. project-graph
+[NX Daemon Server] - 2023-11-29T16:28:27.235Z - Time taken for 'total for creating and serializing project graph' 0.12340100016444921ms
+[NX Daemon Server] - 2023-11-29T16:28:27.236Z - Done responding to the client project-graph
+[NX Daemon Server] - 2023-11-29T16:28:27.236Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2023-11-29T16:28:27.243Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2023-11-29T16:34:05.330Z - [WATCHER]: Processing file changes in outputs
+[NX Daemon Server] - 2023-11-29T16:34:05.331Z - [WATCHER]: 15 file(s) created or restored, 0 file(s) modified, 0 file(s) deleted
+[NX Daemon Server] - 2023-11-29T16:34:05.331Z - [WATCHER]: Stopping the watcher for /home/matheus/Projects/Venture Miner/w3fs (sources)
+[NX Daemon Server] - 2023-11-29T16:34:05.331Z - [WATCHER]: Stopping the watcher for /home/matheus/Projects/Venture Miner/w3fs (outputs)
+[NX Daemon Server] - 2023-11-29T16:34:05.331Z - Server stopped because: "Stopping the daemon the set of ignored files changed (native)"

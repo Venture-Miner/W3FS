@@ -1,20 +1,25 @@
 import { Injectable } from '@nestjs/common';
-import { Alchemy, Network } from 'alchemy-sdk';
-import { formatUnits } from 'viem';
+import { ethers } from 'ethers';
+import * as tokenJson from '../assets/MyToken.json';
 
 @Injectable()
 export class BlockchainService {
-  alchemy: Alchemy;
+  provider: ethers.providers.BaseProvider;
 
   constructor() {
-    this.alchemy = new Alchemy({
-      apiKey: 'YOUR_ALCHEMY_API_KEY',
-      network: Network.ARB_GOERLI,
-    });
+    this.provider = ethers.getDefaultProvider('sepolia');
   }
 
-  async getBalance(address: string) {
-    const balance = await this.alchemy.core.getBalance(address);
-    return formatUnits(balance.toBigInt(), 18);
+  getBalance(address: string) {
+    return this.provider.getBalance(address);
+  }
+
+  getTokenBalance(address: string, contract: string) {
+    const contractInstance = new ethers.Contract(
+      contract,
+      tokenJson.abi,
+      this.provider
+    );
+    return contractInstance['balanceOf'](address);
   }
 }
