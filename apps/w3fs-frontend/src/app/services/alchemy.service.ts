@@ -10,7 +10,7 @@ export class AlchemyService {
 
   constructor() {
     const settings = {
-      apiKey: 'kq8GHDHUCPI4g7oIrijIwOU4xwwdlc8p',
+      apiKey: 'YOUR_ALCHEMY_API_KEY',
       network: Network.ARB_GOERLI,
     };
     this.alchemy = new Alchemy(settings);
