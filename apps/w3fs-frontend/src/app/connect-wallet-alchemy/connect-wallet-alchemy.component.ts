@@ -4,12 +4,6 @@ import { TokenBalance } from 'alchemy-sdk';
 import { AlchemyService } from '../services/alchemy.service';
 import { MetamaskService } from '../services/metamask.service';
 
-declare global {
-  interface Window {
-    ethereum: any;
-  }
-}
-
 @Component({
   selector: 'app-connect-wallet-alchemy',
   templateUrl: './connect-wallet-alchemy.component.html',

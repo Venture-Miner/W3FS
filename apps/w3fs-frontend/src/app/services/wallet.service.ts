@@ -1,16 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment';
 import { Subject } from 'rxjs';
-import {
-  EthereumClient,
-  w3mConnectors,
-  w3mProvider,
-} from '@web3modal/ethereum';
-import { Web3Modal } from '@web3modal/html';
 import { arbitrum, mainnet, polygon, polygonMumbai } from '@wagmi/core/chains';
 import {
-  configureChains,
-  createConfig,
   disconnect,
   fetchBalance,
   getAccount,
@@ -18,6 +10,8 @@ import {
   signMessage,
   watchAccount,
 } from '@wagmi/core';
+import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi';
+import { Web3Modal } from '@web3modal/wagmi/dist/types/src/client';
 
 @Injectable({
   providedIn: 'root',
@@ -25,7 +19,6 @@ import {
 export class WalletService {
   private accountSource = new Subject<any>();
   public accountChanged$ = this.accountSource.asObservable();
-  ethereumClient!: EthereumClient;
   web3Modal!: Web3Modal;
   account: any;
 
@@ -37,35 +30,30 @@ export class WalletService {
     try {
       const chains = [arbitrum, mainnet, polygon, polygonMumbai];
       const projectId = environment.projectId;
-      const { publicClient } = configureChains(chains, [
-        w3mProvider({ projectId }),
-      ]);
-      const wagmiConfig = createConfig({
-        autoConnect: true,
-        connectors: w3mConnectors({ projectId, chains }),
-        publicClient,
+      const metadata = {
+        name: 'W3FS',
+        description: 'Learn to build and connect web3 apps with angular',
+        url: 'www.w3fs.dev',
+        icons: ['www.w3fs.dev/favicon.ico'],
+      };
+      const wagmiConfig = defaultWagmiConfig({
+        chains,
+        projectId,
+        metadata,
       });
-      this.ethereumClient = new EthereumClient(wagmiConfig, chains);
-      this.web3Modal = this.configureWeb3Modal(projectId);
+      this.web3Modal = createWeb3Modal({
+        wagmiConfig,
+        projectId,
+        chains,
+        themeMode: 'light',
+        themeVariables: {
+          '--w3m-accent': '#51B7AF',
+        },
+      });
       this.initializeAccountWatch();
     } catch (error) {
       console.error('Failed to initialize wallet:', error);
     }
-  }
-
-  configureWeb3Modal(projectId: string): Web3Modal {
-    return new Web3Modal(
-      {
-        projectId,
-        themeMode: 'light',
-        themeVariables: {
-          '--w3m-background-color': '#DCF1EF',
-          '--w3m-accent-color': '#51B7AF',
-          '--w3m-logo-image-url': './assets/venture-miner-logo.png',
-        },
-      },
-      this.ethereumClient
-    );
   }
 
   initializeAccountWatch(): void {

@@ -54,7 +54,7 @@ export class ConnectWalletWagmiComponent {
   }
 
   connectWallet() {
-    this.walletService.web3Modal.openModal();
+    this.walletService.web3Modal.open();
   }
 
   ngOnDestroy() {
