@@ -60,7 +60,7 @@ export class WalletService {
         projectId,
         themeMode: 'light',
         themeVariables: {
-          '--w3m-background-color': '#51B7AF',
+          '--w3m-background-color': '#DCF1EF',
           '--w3m-accent-color': '#51B7AF',
           '--w3m-logo-image-url': './assets/venture-miner-logo.png',
         },

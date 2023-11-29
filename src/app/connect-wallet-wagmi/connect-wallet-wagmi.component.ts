@@ -37,20 +37,18 @@ export class ConnectWalletWagmiComponent {
       this.step = 1;
     }
     this.accountSubscription = this.walletService.accountChanged$.subscribe({
-      next: async (account) => {
+      next: async (account: any) => {
         if (account.isConnected) {
-          if (account.isConnected) {
-            this.step = 2;
-            this.walletAddress = account.address;
-            this.walletBalance = await this.walletService.getWalletBalance();
-            this.walletNetwork = await this.walletService.getWalletNetwork();
-            this.walletTokens = await this.walletService.getFetchToken();
-          } else {
-            this.step = 1;
-          }
+          this.step = 2;
+          this.walletAddress = account.address;
+          this.walletBalance = await this.walletService.getWalletBalance();
+          this.walletNetwork = await this.walletService.getWalletNetwork();
+          this.walletTokens = await this.walletService.getFetchToken();
+        } else {
+          this.step = 1;
         }
       },
-      error: (err) => {
+      error: (err: any) => {
         console.error('Error obtaining wallet connection status: ', err);
       },
     });
