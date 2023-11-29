@@ -31,27 +31,45 @@ This project was generated with Angular CLI version **16.0.2**.
 
 ## :rocket: How to install
 
-To use the W3FS Frontend project, follow these steps:
+1. **Clone the Repository:**
 
-1. Clone this repository:
+   Open your terminal and run the following command to clone the repository:
 
    ```bash
    git clone https://github.com/Venture-Miner/w3fs.git
    ```
 
-2. Install the dependencies:
+2. **Install Dependencies:**
+
+   Navigate to the project folder and install the dependencies using Yarn:
 
    ```bash
+   cd w3fs
    yarn install
    ```
 
-3. Start the development server:
+3. **Start the Frontend App:**
+
+   Run the following command to start the frontend application:
 
    ```bash
-   yarn start
+   npx nx serve w3fs-frontend
    ```
 
-4. Open your web browser and navigate to `http://localhost:4200` to access the application.
+4. **Start the API:**
+
+   Start the backend API with the following command:
+
+   ```bash
+   npx nx serve api
+   ```
+
+5. **Access the Application:**
+
+   Open your web browser and enter the following URLs:
+
+   - Frontend: [http://localhost:4200](http://localhost:4200)
+   - API: [http://localhost:3000](http://localhost:3000)
 
 ## Usage
 
