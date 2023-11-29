@@ -1,0 +1,85 @@
+<div class="h-screen bg-gradient-to-b from-green-100 to-brand-turquoise">
+  <div class="p-4">
+    <div class="flex items-center justify-between gap-6">
+      <img src="../assets/venture-miner-logo.png" class="w-32 bg-wite" />
+      <button
+        *ngIf="step === 1"
+        class="p-4 font-bold text-white break-all rounded cursor-pointer bg-brand-turquoise"
+        (click)="connectWallet()"
+      >
+        CONNECT WALLET
+      </button>
+      <div *ngIf="step === 2" class="flex flex-row items-center gap-4 text-sm">
+        <w3m-network-switch></w3m-network-switch>
+        <w3m-core-button></w3m-core-button>
+        <div class="text-white bg-brand-turquoise rounded-xl px-3 py-2">
+          <p class="text-lg font-bold">Balance</p>
+          <p>{{ walletBalance }}</p>
+        </div>
+        <div class="text-white bg-brand-turquoise rounded-xl px-3 py-2">
+          <p class="text-lg font-bold">Network ID</p>
+          <p>{{ walletNetwork }}</p>
+        </div>
+      </div>
+    </div>
+    <table
+      class="text-brand-turquoise font-bold rounded bg-white break-all mt-10 w-full container mx-auto"
+      *ngIf="walletTokens.length"
+    >
+      <thead class="bg-brand-turquoise bg-opacity-10">
+        <tr>
+          <th class="px-6 py-4">Contract Address</th>
+          <th class="px-6 py-4">Token Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let tokenBalance of walletTokens">
+          <tr class="border-b last:border-b-0">
+            <td class="px-6 py-4">
+              {{ tokenBalance.contractAddress }}
+            </td>
+            <td class="px-6 py-4">
+              {{
+                tokenBalance.balance !== "0"
+                  ? tokenBalance.balance
+                  : "No balance"
+              }}
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+    <div
+      *ngIf="step === 2"
+      class="rounded bg-white mt-10 p-4 flex flex-col gap-4 container mx-auto"
+    >
+      <span class="font-bold text-brand-turquoise text-lg">Sign Message</span>
+      <form (submit)="signMessageForm()">
+        <div class="form-group pb-4">
+          <input
+            type="text"
+            class="p-3 border border-brand-turquoise rounded focus:outline-none w-full"
+            id="message"
+            [(ngModel)]="message"
+            name="message"
+            required
+          />
+        </div>
+        <div class="flex justify-end">
+          <button
+            type="submit"
+            class="p-2 font-bold text-white rounded bg-brand-turquoise"
+          >
+            Sign Message
+          </button>
+        </div>
+      </form>
+      <div class="flex gap-4" *ngFor="let signature of signatures">
+        <span class="shrink-0">Signature 👉</span>
+        <span class="text-brand-turquoise break-all font-bold">{{
+          signature
+        }}</span>
+      </div>
+    </div>
+  </div>
+</div>
