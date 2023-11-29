@@ -1,0 +1,162 @@
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[36m⠋[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: setup)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...
+[1m[33mwarn[39m[22m - No utility classes were detected in your source files. If this is unexpected, double-check the `content` option in your Tailwind CSS configuration.
+[1m[33mwarn[39m[22m - https://tailwindcss.com/docs/content-configuration
+[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠋[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: sealing)...[2K[1G[36m⠏[39m Generating browser application bundles (phase: emitting)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[37m[39m
+[37m[0m[1mInitial Chunk Files[22m                                                                                    [2m | [22m[1mNames[22m                                 [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mvendor.js[39m[37m                                                                                              [2m | [22mvendor                                [2m | [22m  [96m4.75 MB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mpolyfills.js[39m[37m                                                                                           [2m | [22mpolyfills                             [2m | [22m[96m332.52 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mstyles.css, styles.js[39m[37m                                                                                  [2m | [22mstyles                                [2m | [22m[96m240.80 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mmain.js[39m[37m                                                                                                [2m | [22mmain                                  [2m | [22m [96m54.71 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mruntime.js[39m[37m                                                                                             [2m | [22mruntime                               [2m | [22m [96m13.09 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1m [22m                                                                                                      [2m | [22m[1mInitial Total[22m                         [2m | [22m  [1m5.37 MB[22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m[1mLazy Chunk Files[22m                                                                                       [2m | [22m[1mNames[22m                                 [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mnode_modules_walletconnect_ethereum-provider_dist_index_es_js.js[39m[37m                                       [2m | [22mwalletconnect-ethereum-provider       [2m | [22m[96m642.21 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mdefault-node_modules_motion_dist_animate_es_js-node_[39m[37mmodules_qrcode_lib_browser_js-node_module-ea4e36.js[39m[37m[2m | [22mweb3modal-ui                          [2m | [22m[96m309.91 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mnode_modules_web3modal_ui_dist_index_js.js[39m[37m                                                             [2m | [22mweb3modal-ui                          [2m | [22m[96m218.47 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mnode_modules_walletconnect_modal-ui_dist_index_js.js[39m[37m                                                   [2m | [22mwalletconnect-modal-ui                [2m | [22m[96m120.17 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mnode_modules_alchemy-sdk_dist_esm_alchemy-websocket-provider-a2f83072_js.js[39m[37m                            [2m | [22malchemy-websocket-provider-a2f83072-js[2m | [22m [96m74.85 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mnode_modules_walletconnect_modal_dist_index_js.js[39m[37m                                                      [2m | [22mwalletconnect-modal                   [2m | [22m [96m18.99 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mdefault-node_modules_alchemy-sdk_dist_esm_alchemy-provider-033c5719_js.js[39m[37m                              [2m | [22malchemy-provider-033c5719-js          [2m | [22m [96m13.66 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mnode_modules_viem__esm_utils_ccip_js.js[39m[37m                                                                [2m | [22mutils-ccip-js                         [2m | [22m [96m10.44 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2023-11-29T02:55:59.303Z[39m[37m[22m - Hash: [1m[37m19c36bedd87bb8ea[39m[37m[22m - Time: [1m[37m7462[39m[37m[22mms[0m[39m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@ethersproject\bignumber\lib.esm\bignumber.js depends on 'bn.js'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@ethersproject\json-wallets\lib.esm\keystore.js depends on 'aes-js'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@ethersproject\json-wallets\lib.esm\keystore.js depends on 'scrypt-js'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@ethersproject\keccak256\lib.esm\index.js depends on 'js-sha3'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@ethersproject\providers\lib.esm\base-provider.js depends on 'bech32'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@ethersproject\signing-key\lib.esm\elliptic.js depends on 'hash.js'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@wagmi\connectors\dist\chunk-W65LBPLT.js depends on 'eventemitter3'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configu[39m[22m[1m[33mring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@walletconnect\jsonrpc-http-connection\dist\esm\http.js depends on 'cross-fetch'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@walletconnect\jsonrpc-utils\dist\esm\env.js depends on '@walletconnect/environment'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@walletconnect\relay-auth\dist\esm\api.js depends on '@stablelib/ed25519'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@walletconnect\utils\dist\index.es.js depends on '@stablelib/chacha20poly1305'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@walletconnect\utils\dist\index.es.js depends on '@stablelib/hkdf'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@walletconnect\utils\dist\index.es.js depends on '@stablelib/random'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@walletconnect\utils\dist\index.es.js depends on '@stablelib/sha256'. CommonJS or AMD dependencies can cause op[39m[22m[1m[33mtimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@walletconnect\utils\dist\index.es.js depends on '@stablelib/x25519'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@walletconnect\utils\dist\index.es.js depends on '@walletconnect/time'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@walletconnect\utils\dist\index.es.js depends on '@walletconnect/window-getters'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@walletconnect\utils\dist\index.es.js depends on '@walletconnect/window-metadata'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@walletconnect\utils\dist\index.es.js depends on 'query-string'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@web3modal\ui\dist\index.js depends on 'qrcode'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\alchemy-sdk\dist\esm\alchemy-websocket-provider-a2f83072.js depends on 's[39m[22m[1m[33mturdy-websocket'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\alchemy-sdk\dist\esm\alchemy-websocket-provider-a2f83072.js depends on 'websocket'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[39m[22m
+[37m[39m
+[37m** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **[39m
+[37m[39m
+[37m[39m
+[37m[92m√[39m[37m Compiled successfully.[39m
+[36m⠋[39m Generating browser application bundles...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: sealing)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: emitting)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[37m[39m
+[37m[0m[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m  [2m | [22m[1mRaw Size[22m[0m[39m
+[37m[0m[92mruntime.js[39m[37m         [2m | [22mruntime[2m | [22m[96m13.09 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m12 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2023-11-29T02:56:00.283Z[39m[37m[22m - Hash: [1m[37m8b3fcaa3f40e30a1[39m[37m[22m - Time: [1m[37m600[39m[37m[22mms[0m[39m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@ethersproject\json-wallets\lib.esm\crowdsale.js depends on 'aes-js'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[0m[33mWarning: [39m[33m[0mC:\Users\Bianca\Desktop\work\w3fs\node_modules\@ethersproject\sha2\lib.esm\sha2.js depends on 'hash.js'. CommonJS or AMD dependencies can cause optimization bailouts.[39m[22m
+[1m[33mFor more info see: https://angular.io/guide/build#configuring-commonjs-dependencies[39m[22m
+[1m[33m[39m[22m
+[1m[33m[39m[22m
+[37m[39m
+[37m[92m√[39m[37m Compiled successfully.[39m
+[36m⠋[39m Generating browser application bundles...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠧[39m Generating browser application bundles (phase: sealing)...[2K[1G[36m⠇[39m Generating browser application bundles (phase: emitting)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[37m[39m
+[37m[0m[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m  [2m | [22m[1mRaw Size[22m[0m[39m
+[37m[0m[92mruntime.js[39m[37m         [2m | [22mruntime[2m | [22m[96m13.09 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m12 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2023-11-29T02:58:39.248Z[39m[37m[22m - Hash: [1m[37m0f84e5208c6d214a[39m[37m[22m - Time: [1m[37m1658[39m[37m[22mms[0m[39m
+[37m[39m
+[37m[92m√[39m[37m Compiled successfully.[39m
+[36m⠋[39m Generating browser application bundles...[2K[1G[36m⠙[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠹[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠸[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠼[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠴[39m Generating browser application bundles (phase: building)...[2K[1G[36m⠦[39m Generating browser application bundles (phase: sealing)...[2K[1G[32m✔[39m Browser application bundle generation complete.
+[37m[39m
+[37m[0m[1mInitial Chunk Files[22m[2m | [22m[1mNames[22m  [2m | [22m [1mRaw Size[22m[0m[39m
+[37m[0m[92mstyles.js[39m[37m          [2m | [22mstyles [2m | [22m[96m236.92 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mmain.js[39m[37m            [2m | [22mmain   [2m | [22m [96m61.09 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[92mruntime.js[39m[37m         [2m | [22mruntime[2m | [22m [96m13.09 kB[39m[37m[2m | [22m[0m[39m
+[37m[0m[0m[39m
+[37m[0m10 unchanged chunks[0m[39m
+[37m[0m[0m[39m
+[37m[0mBuild at: [1m[37m2023-11-29T02:59:07.448Z[39m[37m[22m - Hash: [1m[37mbe2040f27f5b27af[39m[37m[22m - Time: [1m[37m1311[39m[37m[22mms[0m[39m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/w3fs-frontend/src/styles.css[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/@angular-devkit/build-angular/node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31mSyntaxError: Unexpected token, expected "," (5:48)[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/w3fs-frontend/src/app/app.component.css?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/@angular-devkit/build-angular/node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31mSyntaxError: Unexpected token, expected "," (5:48)[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/w3fs-frontend/src/app/connect-wallet-alchemy/connect-wallet-alchemy.component.css?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/@angular-devkit/build-angular/node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31mSyntaxError: Unexpected token, expected "," (5:48)[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/w3fs-frontend/src/app/connect-wallet-wagmi/connect-wallet-wagmi.component.css?ngResource[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/@angular-devkit/build-angular/node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31mSyntaxError: Unexpected token, expected "," (5:48)[39m[22m
+[1m[31m[39m[22m
+[1m[31m[0m[36m./apps/w3fs-frontend/src/styles.css?ngGlobalStyle[39m[31m[0m - [0m[91mError: [39m[31m[0mModule build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):[39m[22m
+[1m[31mHookWebpackError: Module build failed (from ./node_modules/@angular-devkit/build-angular/node_modules/postcss-loader/dist/cjs.js):[39m[22m
+[1m[31mSyntaxError: Unexpected token, expected "," (5:48)[39m[22m
+[1m[31m[39m[22m
+[1m[31m[39m[22m
+[37m[39m
+[37m[91m×[39m[37m Failed to compile.[39m
