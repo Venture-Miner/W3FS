@@ -53,7 +53,7 @@ This project was generated with Angular CLI version **16.0.2**.
    Run the following command to start the frontend application:
 
    ```bash
-   npx nx serve w3fs-frontend
+   yarn nx serve w3fs-frontend
    ```
 
 4. **Start the API:**
@@ -61,7 +61,7 @@ This project was generated with Angular CLI version **16.0.2**.
    Start the backend API with the following command:
 
    ```bash
-   npx nx serve api
+   yarn nx serve api
    ```
 
 5. **Access the Application:**
