@@ -8,7 +8,7 @@ describe('ConnectWalletWagmiComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ConnectWalletWagmiComponent]
+      declarations: [ConnectWalletWagmiComponent],
     });
     fixture = TestBed.createComponent(ConnectWalletWagmiComponent);
     component = fixture.componentInstance;

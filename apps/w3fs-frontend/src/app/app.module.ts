@@ -7,7 +7,11 @@ import { ConnectWalletWagmiComponent } from './connect-wallet-wagmi/connect-wall
 import { ConnectWalletAlchemyComponent } from './connect-wallet-alchemy/connect-wallet-alchemy.component';
 
 @NgModule({
-  declarations: [AppComponent, ConnectWalletWagmiComponent, ConnectWalletAlchemyComponent],
+  declarations: [
+    AppComponent,
+    ConnectWalletWagmiComponent,
+    ConnectWalletAlchemyComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, FormsModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

@@ -21,7 +21,7 @@ export class ConnectWalletWagmiComponent {
   step = 1;
   message: string;
   signatures: string[] = [];
-  walletNetwork: number = -1;
+  walletNetwork: number = 0;
   walletTokens: TokenBalance[] = [];
 
   constructor(private walletService: WalletService) {
@@ -43,7 +43,6 @@ export class ConnectWalletWagmiComponent {
           this.walletAddress = account.address;
           this.walletBalance = await this.walletService.getWalletBalance();
           this.walletNetwork = await this.walletService.getWalletNetwork();
-          this.walletTokens = await this.walletService.getFetchToken();
         } else {
           this.step = 1;
         }

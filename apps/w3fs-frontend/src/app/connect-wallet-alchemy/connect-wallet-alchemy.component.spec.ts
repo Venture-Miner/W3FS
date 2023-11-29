@@ -8,7 +8,7 @@ describe('ConnectWalletAlchemyComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ConnectWalletAlchemyComponent]
+      declarations: [ConnectWalletAlchemyComponent],
     });
     fixture = TestBed.createComponent(ConnectWalletAlchemyComponent);
     component = fixture.componentInstance;
